@@ -1,42 +1,47 @@
+package utils;
+
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 
 /**
  *
  * @author Malaw
  */
 public class Donneur {
+  
+    private String idDonneur, nomDonneur, prenomDonneur, adresse, lieuNaiss, genre, login, password, dateNaiss , cin, numTel, nomGroupe;
+    private int taille, poids, idGroupe;
 
-    private String idDonneur, nomDonneur, prenomDonneur, adresse, lieuNaiss, genre, login, password, dateNaiss;
-    private int taille, poids, cin, numTel, idGroupe;
-    
-
-    public Donneur(String idDonneur, String nomDonneur, String prenomDonneur, int idGroupe, String adresse, String dateNaiss, String lieuNaiss, int taille, int poids, String genre ,  int numTel, int cin, String login, String password) {
+    public Donneur(String idDonneur, String nomDonneur, String prenomDonneur, String adresse, String lieuNaiss, String genre, String login, String password, String dateNaiss, String cin, String numTel, int taille, int poids, int idGroupe, String nomGroupe) {
         this.idDonneur = idDonneur;
         this.nomDonneur = nomDonneur;
         this.prenomDonneur = prenomDonneur;
         this.adresse = adresse;
-        this.dateNaiss = dateNaiss;
         this.lieuNaiss = lieuNaiss;
         this.genre = genre;
         this.login = login;
         this.password = password;
-        this.taille = taille;
-        this.poids = poids;
+        this.dateNaiss = dateNaiss;
         this.cin = cin;
         this.numTel = numTel;
+        this.taille = taille;
+        this.poids = poids;
         this.idGroupe = idGroupe;
+        this.nomGroupe = nomGroupe;
     }
 
-    
+    public String getNomGroupe() {
+        return nomGroupe;
+    }
+
     public String getIdDonneur() {
         return idDonneur;
     }
@@ -51,10 +56,6 @@ public class Donneur {
 
     public String getAdresse() {
         return adresse;
-    }
-
-    public String getDateNaiss() {
-        return dateNaiss;
     }
 
     public String getLieuNaiss() {
@@ -73,6 +74,18 @@ public class Donneur {
         return password;
     }
 
+    public String getDateNaiss() {
+        return dateNaiss;
+    }
+
+    public String getCin() {
+        return cin;
+    }
+
+    public String getNumTel() {
+        return numTel;
+    }
+
     public int getTaille() {
         return taille;
     }
@@ -81,17 +94,8 @@ public class Donneur {
         return poids;
     }
 
-    public int getCin() {
-        return cin;
-    }
-
-    public int getNumTel() {
-        return numTel;
-    }
-    
     public int getIdGroupe() {
         return idGroupe;
     }
-    
     
 }

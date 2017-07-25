@@ -127,7 +127,7 @@ public class Log extends javax.swing.JFrame {
                 w.setVisible(true);
                 
             } else {
-                JOptionPane.showMessageDialog(null, "Login ou password non valide", "Access Denied", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Login ou mot de passe non valide", "Acces refusé", JOptionPane.ERROR_MESSAGE);
 
             }
         } catch (Exception e) {
@@ -137,6 +137,7 @@ public class Log extends javax.swing.JFrame {
 
     private void submitKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_submitKeyPressed
         // TODO add your handling code here:
+       
         
     }//GEN-LAST:event_submitKeyPressed
 

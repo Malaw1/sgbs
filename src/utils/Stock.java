@@ -1,46 +1,46 @@
+package utils;
+
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
-
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 /**
  *
  * @author Malaw
  */
 public class Stock {
-    private int num;
     private String id;
-    private String dateStock;
-    private String dateExp;
+    private Date dateStock;
+    private Date dateExp;
     private String grpSanguin;
-    private int nbrJrRestant;
+    int nbrJr;
 
-    public Stock(String id, String dateStock, String dateExp, String grpSanguin) {
+    public Stock(String id, Date dateStock, Date dateExp, String grpSanguin) {
         this.id = id;
         this.dateStock = dateStock;
         this.dateExp = dateExp;
         this.grpSanguin = grpSanguin;
+
     }
 
-    public int getNum() {
-        return num;
-    }
+    
 
     public String getId() {
         return id;
     }
 
-    public String getDateStock() {
+    public Date getDateStock() {
         return dateStock;
     }
 
-    public String getDateExp() {
+    public Date getDateExp() {
         return dateExp;
     }
 
@@ -48,16 +48,21 @@ public class Stock {
         return grpSanguin;
     }
 
-    public int getNbrJrRestant() {
-        return nbrJrRestant;
-    }
+   
 
-    public static Date addDays(Date date, int days){
+   
+    public static Date addDays(Date getDateStock, int days){
         GregorianCalendar cal = new GregorianCalendar();
-        cal.setTime(date);
+        cal.setTime(getDateStock);
         cal.add(Calendar.DATE, days);
         return cal.getTime();
-    }
+}
     
+    public static Date subtractDays(Date date, int days){
+        GregorianCalendar cal = new GregorianCalendar();
+        cal.setTime(date);
+        cal.add(Calendar.DATE, -days);
+        return cal.getTime();
+    }
     
 }
