@@ -23,14 +23,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="592" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace pref="591" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="2" attributes="0">
                   <Component id="listeDonneurs" alignment="2" min="-2" pref="212" max="-2" attributes="0"/>
                   <Component id="paillasse" alignment="2" min="-2" pref="212" max="-2" attributes="0"/>
                   <Component id="donneurRares" alignment="2" min="-2" pref="212" max="-2" attributes="0"/>
+                  <Component id="quitBtn" alignment="2" min="-2" pref="214" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="491" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="490" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -43,7 +44,9 @@
               <Component id="donneurRares" min="-2" pref="48" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="paillasse" min="-2" pref="47" max="-2" attributes="0"/>
-              <EmptySpace pref="187" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="quitBtn" min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace pref="121" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -52,9 +55,9 @@
     <Component class="javax.swing.JButton" name="listeDonneurs">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Serif" size="14" style="1"/>
+          <Font name="Serif" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Liste des Donneurs"/>
+        <Property name="text" type="java.lang.String" value="LISTE DONNEURS"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listeDonneursActionPerformed"/>
@@ -65,7 +68,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Serif" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Paillasse"/>
+        <Property name="text" type="java.lang.String" value="PAILLASSE"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paillasseActionPerformed"/>
@@ -76,10 +79,21 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Serif" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Donneurs Rares"/>
+        <Property name="text" type="java.lang.String" value="DONNEURS RARES"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="donneurRaresActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="quitBtn">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Serif" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="RETOUR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quitBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

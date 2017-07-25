@@ -7,6 +7,7 @@ package utils;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import sgbs.Welcome;
 
 /**
  *
@@ -36,11 +37,12 @@ public class MenuDonneur extends javax.swing.JFrame {
         listeDonneurs = new javax.swing.JButton();
         paillasse = new javax.swing.JButton();
         donneurRares = new javax.swing.JButton();
+        quitBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listeDonneurs.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        listeDonneurs.setText("Liste des Donneurs");
+        listeDonneurs.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        listeDonneurs.setText("LISTE DONNEURS");
         listeDonneurs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listeDonneursActionPerformed(evt);
@@ -48,7 +50,7 @@ public class MenuDonneur extends javax.swing.JFrame {
         });
 
         paillasse.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
-        paillasse.setText("Paillasse");
+        paillasse.setText("PAILLASSE");
         paillasse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 paillasseActionPerformed(evt);
@@ -56,10 +58,18 @@ public class MenuDonneur extends javax.swing.JFrame {
         });
 
         donneurRares.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
-        donneurRares.setText("Donneurs Rares");
+        donneurRares.setText("DONNEURS RARES");
         donneurRares.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 donneurRaresActionPerformed(evt);
+            }
+        });
+
+        quitBtn.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        quitBtn.setText("RETOUR");
+        quitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quitBtnActionPerformed(evt);
             }
         });
 
@@ -67,13 +77,14 @@ public class MenuDonneur extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(592, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(591, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(listeDonneurs, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(paillasse, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(donneurRares, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(491, 491, 491))
+                    .addComponent(donneurRares, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(490, 490, 490))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,7 +95,9 @@ public class MenuDonneur extends javax.swing.JFrame {
                 .addComponent(donneurRares, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(paillasse, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(quitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         pack();
@@ -99,6 +112,9 @@ public class MenuDonneur extends javax.swing.JFrame {
 
     private void donneurRaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donneurRaresActionPerformed
         // TODO add your handling code here:
+        dispose();
+        Rares r = new Rares();
+        r.setVisible(true);
     }//GEN-LAST:event_donneurRaresActionPerformed
 
     private void listeDonneursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listeDonneursActionPerformed
@@ -108,6 +124,13 @@ public class MenuDonneur extends javax.swing.JFrame {
         d.setVisible(true);
     }//GEN-LAST:event_listeDonneursActionPerformed
 
+    private void quitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Welcome md = new Welcome();
+        md.setVisible(true);
+    }//GEN-LAST:event_quitBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -116,5 +139,6 @@ public class MenuDonneur extends javax.swing.JFrame {
     private javax.swing.JButton donneurRares;
     private javax.swing.JButton listeDonneurs;
     private javax.swing.JButton paillasse;
+    private javax.swing.JButton quitBtn;
     // End of variables declaration//GEN-END:variables
 }
